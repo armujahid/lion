@@ -49,7 +49,7 @@ class IsInitialsExample extends Validator {
 
   execute(value) {
     let hasError = false;
-    if (!IsString || !isInitialsRegex.test(value.toLowerCase())) {
+    if (!IsString(value) || !isInitialsRegex.test(value.toLowerCase())) {
       hasError = true;
     }
     return hasError;
